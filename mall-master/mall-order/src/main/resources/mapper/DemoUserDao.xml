@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wj.test.easycode.dao.DemoUserDao">
+
+    <resultMap type="wj.test.easycode.entity.DemoUser" id="DemoUserMap">
+        <result property="userid" column="USERID" jdbcType="VARCHAR"/>
+        <result property="username" column="USERNAME" jdbcType="VARCHAR"/>
+        <result property="idcard" column="IDCARD" jdbcType="VARCHAR"/>
+        <result property="sex" column="SEX" jdbcType="INTEGER"/>
+        <result property="phone" column="PHONE" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="DemoUserMap">
+        select
+          USERID, USERNAME, IDCARD, SEX, PHONE
+        from DWY_DB_TEST3.DEMO_USER
+        where USERID = #{userid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="DemoUserMap">
+        select
+          USERID, USERNAME, IDCARD, SEX, PHONE
+        from DWY_DB_TEST3.DEMO_USER
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="DemoUserMap">
+        select
+          USERID, USERNAME, IDCARD, SEX, PHONE
+        from DWY_DB_TEST3.DEMO_USER
+        <where>
+            <if test="userid != null and userid != ''">
+                and USERID = #{userid}
+            </if>
+            <if test="username != null and username != ''">
+                and USERNAME = #{username}
+            </if>
+            <if test="idcard != null and idcard != ''">
+                and IDCARD = #{idcard}
+            </if>
+            <if test="sex != null">
+                and SEX = #{sex}
+            </if>
+            <if test="phone != null and phone != ''">
+                and PHONE = #{phone}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="userid" useGeneratedKeys="true">
+        insert into DWY_DB_TEST3.DEMO_USER(USERNAME, IDCARD, SEX, PHONE)
+        values (#{username}, #{idcard}, #{sex}, #{phone})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update DWY_DB_TEST3.DEMO_USER
+        <set>
+            <if test="username != null and username != ''">
+                USERNAME = #{username},
+            </if>
+            <if test="idcard != null and idcard != ''">
+                IDCARD = #{idcard},
+            </if>
+            <if test="sex != null">
+                SEX = #{sex},
+            </if>
+            <if test="phone != null and phone != ''">
+                PHONE = #{phone},
+            </if>
+        </set>
+        where USERID = #{userid}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from DWY_DB_TEST3.DEMO_USER where USERID = #{userid}
+    </delete>
+
+</mapper>
