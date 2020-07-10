@@ -26,7 +26,7 @@ spring:
 #    password: dwy_db_test3pass
 mybatis:
   mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.wj.entity
+  type-aliases-package: com.mall.entity
   mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
