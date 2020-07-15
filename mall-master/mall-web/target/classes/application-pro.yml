@@ -1,0 +1,10 @@
+server:
+  port: 8088
+
+
+#spring:
+#  datasource:
+#    username:
+#    password:
+#    url:
+#    driver-class-name: com.mysql.jdbc.Driver

@@ -5,7 +5,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.mall.RedisUtil;
 import com.mall.dao.UserMapper;
 import com.mall.entity.UserEntity;
-import exception.MyException;
+import com.mall.exception.MallException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -34,7 +34,7 @@ public class Test {
     public String getUser(@ApiParam(value = "用户id") @RequestParam("userid") String userid) {
         UserEntity userEntity = mapper.selectUser(userid);
         if(userEntity == null){
-            throw new MyException(3210,"未查询到数据！");
+            throw new MallException(3210,"未查询到数据！");
         }
         return JSON.toJSONString(userEntity);
     }

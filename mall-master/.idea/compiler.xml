@@ -6,24 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mall-goods" />
-        <module name="mall-security" />
-        <module name="mall-sys" />
-        <module name="mall-zuul" />
-        <module name="mall-common" />
-        <module name="mall-eureka" />
-        <module name="mall-customer" />
         <module name="mall-weixin" />
+        <module name="mall-web" />
+        <module name="mall-user" />
+        <module name="mall-eureka" />
+        <module name="mall-security" />
         <module name="mall-hystrix-dashboard" />
+        <module name="mall-eureka-security" />
+        <module name="mall-common" />
+        <module name="mall-goods" />
+        <module name="mall-customer" />
         <module name="mall-oauth" />
         <module name="mall-order" />
-        <module name="mall-web" />
+        <module name="mall-sys" />
+        <module name="mall-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mall-common" target="1.8" />
+      <module name="mall-common" target="1.5" />
       <module name="mall-customer" target="1.8" />
       <module name="mall-eureka" target="1.8" />
+      <module name="mall-eureka-security" target="1.8" />
       <module name="mall-goods" target="1.8" />
       <module name="mall-hystrix-dashboard" target="1.8" />
       <module name="mall-oauth" target="1.8" />
@@ -31,6 +34,7 @@
       <module name="mall-parents" target="1.8" />
       <module name="mall-security" target="1.8" />
       <module name="mall-sys" target="1.8" />
+      <module name="mall-user" target="1.8" />
       <module name="mall-web" target="1.8" />
       <module name="mall-weixin" target="1.8" />
       <module name="mall-zuul" target="1.8" />
@@ -38,15 +42,17 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="mall-common" options="-parameters" />
+      <module name="mall-common" options="" />
       <module name="mall-customer" options="-parameters" />
       <module name="mall-eureka" options="-parameters" />
+      <module name="mall-eureka-security" options="-parameters" />
       <module name="mall-goods" options="-parameters" />
       <module name="mall-hystrix-dashboard" options="-parameters" />
       <module name="mall-oauth" options="-parameters" />
       <module name="mall-order" options="-parameters" />
       <module name="mall-security" options="-parameters" />
       <module name="mall-sys" options="-parameters" />
+      <module name="mall-user" options="-parameters" />
       <module name="mall-web" options="-parameters" />
       <module name="mall-weixin" options="-parameters" />
       <module name="mall-zuul" options="-parameters" />

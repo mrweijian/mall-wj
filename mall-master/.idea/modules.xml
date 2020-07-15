@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/mall-common/mall-common.iml" filepath="$PROJECT_DIR$/mall-common/mall-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-customer/mall-customer.iml" filepath="$PROJECT_DIR$/mall-customer/mall-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-eureka/mall-eureka.iml" filepath="$PROJECT_DIR$/mall-eureka/mall-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-eureka-security/mall-eureka-security.iml" filepath="$PROJECT_DIR$/mall-eureka-security/mall-eureka-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-goods/mall-goods.iml" filepath="$PROJECT_DIR$/mall-goods/mall-goods.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-hystrix-dashboard/mall-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/mall-hystrix-dashboard/mall-hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-oauth/mall-oauth.iml" filepath="$PROJECT_DIR$/mall-oauth/mall-oauth.iml" />
@@ -12,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/mall-parents.iml" filepath="$PROJECT_DIR$/mall-parents.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-security/mall-security.iml" filepath="$PROJECT_DIR$/mall-security/mall-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-sys/mall-sys.iml" filepath="$PROJECT_DIR$/mall-sys/mall-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-user/mall-user.iml" filepath="$PROJECT_DIR$/mall-user/mall-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-web/mall-web.iml" filepath="$PROJECT_DIR$/mall-web/mall-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-weixin/mall-weixin.iml" filepath="$PROJECT_DIR$/mall-weixin/mall-weixin.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-zuul/mall-zuul.iml" filepath="$PROJECT_DIR$/mall-zuul/mall-zuul.iml" />
