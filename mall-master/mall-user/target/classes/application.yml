@@ -3,6 +3,14 @@ server:
 spring:
   application:
     name: user-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mrweijian/springcloud-config.git
+          username: 1026760118@qq.com
+          password: wj199585
+          clone-on-start: true #开启启动时直接从git获取配置
 eureka:
   client:
     register-with-eureka: true
