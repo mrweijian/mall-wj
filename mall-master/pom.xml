@@ -17,6 +17,7 @@
         <module>mall-weixin</module>
         <module>mall-eureka-security</module>
         <module>mall-user</module>
+        <module>generator-tmybatis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

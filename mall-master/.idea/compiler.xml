@@ -2,13 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mall-weixin" />
-        <module name="mall-web" />
         <module name="mall-user" />
+        <module name="mall-web" />
+        <module name="generator-tmybatis" />
+        <module name="mall-zuul" />
         <module name="mall-eureka" />
         <module name="mall-security" />
         <module name="mall-hystrix-dashboard" />
@@ -19,10 +22,10 @@
         <module name="mall-oauth" />
         <module name="mall-order" />
         <module name="mall-sys" />
-        <module name="mall-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="generator-tmybatis" target="1.8" />
       <module name="mall-common" target="1.5" />
       <module name="mall-customer" target="1.8" />
       <module name="mall-eureka" target="1.8" />
@@ -42,6 +45,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="generator-tmybatis" options="-parameters" />
       <module name="mall-common" options="" />
       <module name="mall-customer" options="-parameters" />
       <module name="mall-eureka" options="-parameters" />

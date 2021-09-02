@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: pro
 #  redis:
 #    database: 0 # Redis数据库索引（默认为0）
 #    host: 192.168.146.128

@@ -1,9 +1,7 @@
 package com.mall.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.mall.RedisUtil;
-import com.mall.dao.UserMapper;
 import com.mall.entity.UserEntity;
 import com.mall.exception.MallException;
 import io.swagger.annotations.Api;
@@ -18,39 +16,31 @@ import org.springframework.web.client.RestTemplate;
 @Api(value = "swagger测试")
 public class Test {
 
-    @Autowired
-    UserMapper mapper;
-
-    @Autowired
-    RestTemplate restTemplate;
-
-    @Autowired
-    RedisUtil redisUtil;
-
     private static final String serviceName = "http://WJ-GOODS";
 
     @PostMapping("/hello")
     @ApiOperation(value = "测试方法",notes = "获取数据库用户详情")
     public String getUser(@ApiParam(value = "用户id") @RequestParam("userid") String userid) {
-        UserEntity userEntity = mapper.selectUser(userid);
-        if(userEntity == null){
-            throw new MallException(3210,"未查询到数据！");
-        }
-        return JSON.toJSONString(userEntity);
+//        UserEntity userEntity = mapper.selectUser(userid);
+//        if(userEntity == null){
+//            throw new MallException(3210,"未查询到数据！");
+//        }
+//        return JSON.toJSONString(userEntity);
+        return null;
     }
 
     @GetMapping("/getgood")
-    @HystrixCommand(fallbackMethod="defaultfallback")
+    //@HystrixCommand(fallbackMethod="defaultfallback")
     @ApiOperation(value = "获取产品信息")
     public String getGood() {
         System.out.println("success");
-        return "ok";
+        return "ok11";
         //return restTemplate.getForObject(serviceName+"/test/gettest",String.class);
     }
 
     @GetMapping("/setRedisTest")
     public String setRedisTest(){
-        redisUtil.set("weijian","hello redis");
+        //redisUtil.set("weijian","hello redis");
         return "SUCCESS";
     }
 
