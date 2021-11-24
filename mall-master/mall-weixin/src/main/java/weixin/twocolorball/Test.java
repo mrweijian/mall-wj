@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 
 public class Test {
 	public static void main(String[] args) {
-		/*List<String> codes = getCodes(100000);
-		luckyNumber("19950917","聂双");*/
-		List<String> codes = new ArrayList<>();
-		System.out.println(codes);
+		//List<String> codes = getCodes(100000);
+		luckyNumber("19950805","魏建");
+//		List<String> codes = new ArrayList<>();
+//		System.out.println(codes);
 	}
 
 	public static List<String> luckyNumber(String birthday, String name){

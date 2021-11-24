@@ -1,13 +1,12 @@
-import {request} from '@/utils/request.js';
-import Qs from 'qs';
+import request from '../utils/request'
+import Qs from 'qs'
 
 export class Test {
-
-  TestOne(userid){
-    return request.post('test',Qs.stringify({userid:userid}))
+  TestOne (userid) {
+    return request.post('test', Qs.stringify({userid: userid}))
   }
 
-  TestTwo(){
+  TestTwo () {
     return request.post('test')
   }
 }

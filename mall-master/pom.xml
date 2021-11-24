@@ -3,19 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>mall-sys</module>
-        <module>mall-order</module>
-        <module>mall-customer</module>
         <module>mall-web</module>
         <module>mall-goods</module>
         <module>mall-eureka</module>
         <module>mall-common</module>
         <module>mall-zuul</module>
-        <module>mall-hystrix-dashboard</module>
-        <module>mall-security</module>
-        <module>mall-oauth</module>
         <module>mall-weixin</module>
-        <module>mall-eureka-security</module>
         <module>mall-user</module>
         <module>generator-tmybatis</module>
     </modules>

@@ -16,7 +16,6 @@ public class MyExceptionHandler {
     @ExceptionHandler(MallException.class)
     public Map<String,String> errorResult(MallException e, HttpServletResponse response){
         Map<String,String> errMap = new HashMap<>();
-        //errMap.put(e.getCode(),e.getMsg());
         try {
             response.sendError(e.getCode(),e.getMsg());
         } catch (IOException ex) {

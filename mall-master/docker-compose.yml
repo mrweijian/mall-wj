@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  eureka:
+    image: mall-eureka:1.0
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+  web:
+    image: mall-eureka:1.0
+    ports:
+      - 8089:8089
+    expose:
+      - 8089
